@@ -1,0 +1,8 @@
+# # ItemView
+#
+# Extends from `Marionette.ItemView`. Is used as a wrapper
+# in order to be able to add custom code to all `ItemView`
+# on the application without modifying Marionette code directly.
+@App.module "Views", (Views, App, Backbone, Marionette, $, _) ->
+
+  class Views.ItemView extends Marionette.ItemView

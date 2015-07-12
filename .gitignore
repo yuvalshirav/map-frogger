@@ -1,0 +1,6 @@
+vendor
+src/app/templates
+node_modules
+dist
+test/unit/test.js
+.sass-cache
