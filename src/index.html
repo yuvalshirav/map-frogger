@@ -1,17 +1,19 @@
 <!doctype html>
 <html>
   <head>
-    <title>Puppeteer</title>
+    <meta name="viewport" content="width=535, height=300, initial-scale=1, user-scalable=no">
+
+    <title>Map Frogger</title>
 
     <!-- build:css:production styles.min.css -->
     <link rel="stylesheet" href="styles.css" />
     <!-- /build -->
+    <link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <div id="wrapper">
       <div id="header"></div>
       <div id="content"></div>
-
     </div>
 
     <!-- build:js:production app.min.js -->
@@ -24,6 +26,7 @@
         App.start({
           environment: "<%= environment %>"
         });
+        FastClick.attach(document.body);
       });
     </script>
     <!-- /build -->

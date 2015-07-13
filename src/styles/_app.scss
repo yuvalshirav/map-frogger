@@ -1,0 +1,40 @@
+@import "mixins";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica, Verdana, sans-serif;
+  color: #666;
+}
+
+a {
+  color: #999;
+
+  &:hover {
+    color: #555;
+  }
+}
+
+#wrapper {
+  margin: 1em auto;
+  @include mobile-only {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}
+
+#header {
+  text-align: center;
+}
+
+#content {
+  margin: 0 auto;
+  width: 535px;
+  @include mobile-only {
+    width: auto;
+  }
+}
+
+

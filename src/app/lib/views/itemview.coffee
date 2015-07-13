@@ -6,3 +6,17 @@
 @App.module "Views", (Views, App, Backbone, Marionette, $, _) ->
 
   class Views.ItemView extends Marionette.ItemView
+
+    # https://github.com/gmac/backbone.epoxy/issues/94
+    constructor: ->
+      Marionette.ItemView.prototype.constructor.apply(@, arguments)
+      @epoxify()
+
+    epoxify: ->
+      _.defaults @, Backbone.Epoxy.View::
+      @listenTo @, "ui:bind", @applyBindings
+      @listenTo @, "before:close", @removeBindings
+
+    bindUIElements: ->
+      @trigger "ui:bind"
+      Marionette.View::bindUIElements.apply this, arguments

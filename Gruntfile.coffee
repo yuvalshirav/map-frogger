@@ -133,7 +133,7 @@ module.exports = (grunt) ->
       server:
         options:
           port: 3000
-          livereload: true
+          livereload: false
 
     casperjs:
       files: ["<%= paths.tests.functional %>/**/*.coffee"]
